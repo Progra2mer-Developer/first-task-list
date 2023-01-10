@@ -1,4 +1,9 @@
 :root {
+  --light-bg-blue: #243b55;
+  --dark-bg-blue: #141e30;
+  --col-white: #fff;
+  --line-height: 1;
+
   --sp-s: 10px;
   --sp-m: 15px;
   --sp-l: 20px;
@@ -12,8 +17,9 @@
   box-sizing: border-box;
 }
 body {
+  line-height: var(--line-height);
   font-family: "Poppins", sans-serif;
-  background: #141e30; /* fallback for old browsers */
+  background: var(--dark-bg-blue); /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
     #243b55,
@@ -24,7 +30,7 @@ body {
     #243b55,
     #141e30
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: white;
+  color: var(--col-white);
 }
 
 ::-webkit-scrollbar {

@@ -1,14 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  taskList: [],
 };
 
 export const taskListSlice = createSlice({
   name: "taskList",
   initialState,
   reducers: {
-    addTaskItem: (state, action) => {},
+    addTaskItem: (state, action) => {
+      state.taskList.push(action.payload);
+    },
     removeTaskItem: (state, action) => {},
     toggleFavourite: (state, action) => {},
     toggleFavourite: (state, action) => {},
@@ -16,6 +18,6 @@ export const taskListSlice = createSlice({
   },
 });
 
-export const {} = taskListSlice.actions;
+export const { addTaskItem } = taskListSlice.actions;
 
 export default taskListSlice.reducer;

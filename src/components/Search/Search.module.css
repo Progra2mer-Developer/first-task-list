@@ -1,14 +1,24 @@
-.search {
+.input {
   width: 100%;
   border-radius: 30px;
   resize: none;
-  padding: var(--sp-m) var(--sp-m) var(--sp-m) var(--sp-m);
+  padding: var(--sp-m) 40px var(--sp-m) var(--sp-m);
   box-sizing: border-box;
   overflow: hidden;
   font-size: 16px;
   line-height: 1;
+  border: none;
+  outline: none;
+  word-wrap: break-word;
+  position: relative;
 }
 .search:focus {
   border: none;
   outline: none;
+}
+.clear {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  cursor: pointer;
 }

@@ -1,4 +1,43 @@
 .typeText {
   position: absolute;
   bottom: 0;
+  min-width: 100%;
+}
+.input {
+  position: relative;
+  width: 100%;
+  resize: none;
+  padding: var(--sp-m) 120px var(--sp-m) var(--sp-m);
+  overflow: hidden;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  line-height: var(--line-height);
+  word-wrap: break-word;
+  right: 0;
+  bottom: 0;
+}
+.input :focus {
+  border: none;
+  outline: none;
+}
+.btn {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+
+  padding: var(--sp-m);
+  border: none;
+  overflow: none;
+  border-radius: 19px;
+  color: var(--col-white);
+  background-color: var(--light-bg-blue);
+  line-height: var(--line-height);
+  cursor: pointer;
+}
+.clear {
+  position: absolute;
+  right: 75px;
+  bottom: 13px;
+  cursor: pointer;
 }
