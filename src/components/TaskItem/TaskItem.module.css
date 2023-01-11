@@ -1,0 +1,24 @@
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--col-white);
+  color: var(--col-black);
+  border-radius: 30px;
+  padding: var(--sp-xl) 45px var(--sp-xl) var(--sp-xl);
+  margin-bottom: var(--sp-s);
+
+  position: relative;
+}
+.text {
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.remove {
+  width: 28px;
+  position: absolute;
+  right: 14px;
+  top: 20px;
+
+  cursor: pointer;
+}

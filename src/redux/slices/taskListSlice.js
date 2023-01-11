@@ -12,7 +12,9 @@ export const taskListSlice = createSlice({
       state.taskList.push(action.payload);
     },
     removeTaskItem: (state, action) => {},
-    toggleFavourite: (state, action) => {},
+    clearTaskList: (state) => {
+      state.taskList = [];
+    },
     toggleFavourite: (state, action) => {},
     toggleComplited: (state, action) => {},
   },

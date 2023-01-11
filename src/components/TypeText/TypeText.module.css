@@ -31,13 +31,13 @@
   overflow: none;
   border-radius: 19px;
   color: var(--col-white);
-  background-color: var(--light-bg-blue);
+  background-color: var(--bg-light-blue);
   line-height: var(--line-height);
   cursor: pointer;
 }
 .clear {
   position: absolute;
   right: 75px;
-  bottom: 13px;
+  bottom: 11px;
   cursor: pointer;
 }
