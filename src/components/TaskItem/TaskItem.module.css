@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--col-white);
-  color: var(--col-black);
+  background-color: rgb(66, 66, 79);
+  color: var(--col-white);
   border-radius: 30px;
   padding: var(--sp-xl) 45px var(--sp-xl) var(--sp-xl);
   margin-bottom: var(--sp-s);
@@ -14,11 +14,18 @@
   word-wrap: break-word;
   overflow: hidden;
 }
-.remove {
-  width: 28px;
+.icons {
   position: absolute;
   right: 14px;
   top: 20px;
+}
+.remove {
+  width: 28px;
 
+  cursor: pointer;
+}
+.important {
+  width: 28px;
+  height: 28px;
   cursor: pointer;
 }

@@ -13,6 +13,9 @@ const HomePage = () => {
         <Search />
       </div>
       <div>
+      
+          <button className={s.clear}>Clear</button>
+
         <TaskList />
         <TypeText />
       </div>

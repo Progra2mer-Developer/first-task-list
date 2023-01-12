@@ -13,12 +13,12 @@ const TypeText = () => {
     <div className={s.typeText}>
       <form onSubmit={(e) => e.preventDefault()} className={s.form}>
         <ReactTextareaAutosize
+          placeholder="Type text"
           ref={inputRef}
           className={s.input}
           onChange={(e) => setText(e.target.value)}
           value={text}
         />
-      
 
         {text && (
           <svg
@@ -44,7 +44,7 @@ const TypeText = () => {
                 text: text,
                 id: Date.now(),
                 complited: false,
-                favourite: false,
+                important: false,
               })
             );
             setText("");

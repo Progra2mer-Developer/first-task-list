@@ -1,4 +1,5 @@
 .taskList {
-  padding: var(--sp-m) 0 30px;
-  overflow: hidden;
+  height: calc(100vh - 315px);
+  margin: var(--sp-m) 0 var(--sp-xl);
+  overflow-x: auto;
 }

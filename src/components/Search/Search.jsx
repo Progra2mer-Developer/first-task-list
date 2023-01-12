@@ -10,6 +10,7 @@ const Search = () => {
   return (
     <div className={s.search}>
       <ReactTextareaAutosize
+        placeholder="Search"
         value={text}
         ref={inputRef}
         cacheMeasurements={false}

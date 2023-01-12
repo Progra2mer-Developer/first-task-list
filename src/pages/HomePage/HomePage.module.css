@@ -1,9 +1,27 @@
 .homePage {
   position: relative;
   height: calc(100vh - 100px);
-  min-height: 300px;
   width: 100%;
+  overflow: hidden;
 }
 .title {
   text-align: center;
+  margin-bottom: 20px;
+}
+.clearContainer {
+  width: 100%;
+}
+.clear {
+  margin: 5px 0 0;
+  padding: var(--sp-s) var(--sp-m);
+  border-radius: 30px;
+  background-color: blue;
+  color: var(--col-white);
+  border: 2px solid blue;
+  cursor: pointer;
+  font-weight: 700;
+}
+.clear:hover {
+  background-color: var(--col-white);
+  color: blue;
 }
