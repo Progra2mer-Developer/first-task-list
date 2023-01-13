@@ -9,7 +9,13 @@ const Navbar = () => {
     <div className={s.navbar}>
       {routes.map((route) => {
         return (
-          <NavLink to={route.path} key={route.name}>
+          <NavLink
+            to={route.path}
+            key={route.name}
+            className={({ isActive }) =>
+              `${s.link} ${isActive ? s.active : ""}`
+            }
+          >
             {route.name}
           </NavLink>
         );

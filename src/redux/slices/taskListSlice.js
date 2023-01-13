@@ -2,16 +2,17 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   taskList: [
-    { text: "123", id: "1", computed: false, important: false },
-    { text: "345", id: "2", computed: false, important: false },
-    { text: "67", id: "3", computed: false, important: false },
-    { text: "89", id: "4", computed: false, important: false },
-    { text: "ab", id: "5", computed: false, important: false },
-    { text: "cd", id: "6", computed: false, important: false },
-    { text: "ef", id: "7", computed: false, important: false },
-    { text: "gh", id: "8", computed: false, important: false },
-    // { text: "ij", id: "9", computed: false, important: false },
+    { text: "test item 1", id: "1", completed: true, important: false },
+    { text: "test item 2", id: "2", completed: false, important: true },
+    // { text: "test item 3", id: "3", completed: false, important: false },
+    // { text: "test item 4", id: "4", completed: false, important: false },
+    // { text: "test item 5", id: "5", completed: false, important: false },
+    // { text: "test item 6", id: "6", completed: false, important: false },
+    // { text: "test item 7", id: "7", completed: false, important: false },
+    // { text: "test item 8", id: "8", completed: false, important: false },
+    // { text: "test item 9", id: "9", completed: false, important: false },
   ],
+  searchString: "",
 };
 
 export const taskListSlice = createSlice({
@@ -32,27 +33,52 @@ export const taskListSlice = createSlice({
     toggleImportant: (state, action) => {
       const newTaskList = [];
       state.taskList.map((taskItem) => {
-        const { id, text, author, completed, important } = taskItem;
-        if (taskItem.id === action.payload) {
+        const { id, text, completed, important } = taskItem;
+        if (id === action.payload) {
           newTaskList.push({
             id,
             text,
-            author,
             completed,
             important: !important,
           });
         } else {
-          newTaskList.push({ id, text, author, completed, important });
+          newTaskList.push({ id, text, completed, important });
+        }
+      });
+      state.taskList = [...newTaskList];
+    },
+    toggleComplited: (state, action) => {
+      console.log("toggleComplited");
+      const newTaskList = [];
+      state.taskList.map((taskItem) => {
+        const { id, text, completed, important } = taskItem;
+        if (id === action.payload) {
+          newTaskList.push({
+            id,
+            text,
+            completed: !completed,
+            important,
+          });
+        } else {
+          newTaskList.push({ id, text, completed, important });
         }
       });
       console.log(newTaskList);
-      // state.taskList = [...newTaskList];
+      state.taskList = [...newTaskList];
     },
-    toggleComplited: (state, action) => {},
+    setSearchString: (state, action) => {
+      state.searchString = action.payload;
+    },
   },
 });
 
-export const { addTaskItem, removeTaskItem, toggleImportant } =
-  taskListSlice.actions;
+export const {
+  addTaskItem,
+  removeTaskItem,
+  toggleImportant,
+  toggleComplited,
+  clearTaskList,
+  setSearchString,
+} = taskListSlice.actions;
 
 export default taskListSlice.reducer;

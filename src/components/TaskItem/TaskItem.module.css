@@ -13,6 +13,14 @@
 .text {
   word-wrap: break-word;
   overflow: hidden;
+
+  cursor: pointer;
+}
+.gold {
+  color: gold;
+}
+.crossOut {
+  text-decoration: line-through;
 }
 .icons {
   position: absolute;

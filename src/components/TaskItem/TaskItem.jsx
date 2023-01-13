@@ -1,26 +1,37 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeTaskItem, toggleImportant } from "../../redux/slices/taskListSlice";
+import {
+  removeTaskItem,
+  toggleComplited,
+  toggleImportant,
+} from "../../redux/slices/taskListSlice";
 
 import s from "./TaskItem.module.css";
 
 const TaskItem = (props) => {
   const dispath = useDispatch();
-  const { text, complited, important ,id} = props;
+  const { text, completed, important, id } = props;
   return (
     <div className={s.taskItem}>
-      <div className={s.text}>{text}</div>
+      <div
+        className={`${s.text} ${important ? s.gold : ""} ${
+          completed ? s.crossOut : ""
+        }`}
+        onClick={() => {
+          dispath(toggleComplited(id));
+        }}
+      >
+        {text}
+      </div>
       <div className={s.icons}>
         <svg
           className={s.important}
           onClick={() => {
-            console.log("important");
-            dispath(toggleImportant(id))
-
+            dispath(toggleImportant(id));
           }}
           version="1.2"
           viewBox="0 0 24 24"
-          fill={important ? "gold" : "black"}
+          fill={important ? "gold" : "#000"}
         >
           <path
             d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521    
@@ -39,7 +50,7 @@ const TaskItem = (props) => {
           className={s.remove}
           onClick={() => {
             if (window.confirm("Are you sure you want to delete the task?")) {
-             dispath(removeTaskItem(id))
+              dispath(removeTaskItem(id));
             }
           }}
           fill="#b8222095"

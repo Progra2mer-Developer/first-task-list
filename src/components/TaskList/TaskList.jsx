@@ -7,12 +7,14 @@ import s from "./TaskList.module.css";
 
 const TaskList = () => {
   const taskList = useSelector((state) => state.taskList.taskList);
-
+  const searchString = useSelector((state) => state.taskList.searchString);
   return (
     <div className={s.taskList}>
-      {taskList.map((taskItem) => {
-        return <TaskItem key={taskItem.id} {...taskItem} />;
-      })}
+      {taskList
+        .filter((taskItem) => taskItem.text.includes(searchString))
+        .map((taskItem) => {
+          return <TaskItem key={taskItem.id} {...taskItem} />;
+        })}
     </div>
   );
 };

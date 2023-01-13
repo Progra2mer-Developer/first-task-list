@@ -1,0 +1,15 @@
+.link {
+  color: var(--col-white);
+  text-decoration: none;
+  padding: var(--sp-s) var(--sp-m);
+  border-bottom: 1px solid transparent;
+  margin-right: var(--sp-s);
+  transition: 0.2s linear border-bottom;
+}
+.link:hover {
+  border-bottom: 1px solid var(--col-white);
+  transition: 0.2s linear border-bottom;
+}
+.active {
+  border-bottom: 1px solid var(--col-white);
+}

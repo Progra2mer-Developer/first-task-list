@@ -1,4 +1,10 @@
 img {
-    width: 56px;
-    height: 56px;
+  width: 56px;
+  height: 56px;
+}
+.logo {
+  color: var(--col-white);
+  text-decoration: none;
+  padding: var(--sp-s) var(--sp-m);
+  border-bottom: 1px solid none;
 }
