@@ -20,7 +20,9 @@ export const taskListSlice = createSlice({
   initialState,
   reducers: {
     addTaskItem: (state, action) => {
-      state.taskList.push(action.payload);
+      if (action?.payload?.text?.length) {
+        state.taskList.push(action.payload);
+      }
     },
     removeTaskItem: (state, action) => {
       state.taskList = state.taskList.filter(

@@ -3,5 +3,5 @@
   margin: 0 auto;
   padding: 0 var(--sp-xl);
   height: 100vh;
-  overflow: hidden;
+  min-height: 400px;
 }

@@ -5,8 +5,9 @@
   background-color: rgb(66, 66, 79);
   color: var(--col-white);
   border-radius: 30px;
-  padding: var(--sp-xl) 45px var(--sp-xl) var(--sp-xl);
+  padding: var(--sp-xl) 75px var(--sp-xl) var(--sp-xl);
   margin-bottom: var(--sp-s);
+  margin-right: 5px;
 
   position: relative;
 }

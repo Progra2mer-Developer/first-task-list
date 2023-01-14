@@ -1,5 +1,7 @@
 .taskList {
   height: calc(100vh - 315px);
-  margin: var(--sp-m) 0 var(--sp-xl);
+  min-height: 100px;
+
+  margin: var(--sp-m) 0 var(--sp-s);
   overflow-x: auto;
 }

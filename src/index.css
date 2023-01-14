@@ -19,7 +19,7 @@
 }
 body {
   line-height: var(--line-height);
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   background: var(--bg-dark-blue); /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,

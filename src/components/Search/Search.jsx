@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import ReactTextareaAutosize from "react-textarea-autosize";
 import { setSearchString } from "../../redux/slices/taskListSlice";
 
@@ -11,7 +11,6 @@ const Search = () => {
 
   const dispatch = useDispatch();
 
- 
   return (
     <div className={s.search}>
       <ReactTextareaAutosize
@@ -29,6 +28,7 @@ const Search = () => {
         <svg
           onClick={() => {
             setText("");
+            dispatch(setSearchString(""));
             inputRef.current.focus();
           }}
           xmlns="http://www.w3.org/2000/svg"

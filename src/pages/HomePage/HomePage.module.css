@@ -1,8 +1,7 @@
 .homePage {
   position: relative;
-  height: calc(100vh - 100px);
+  height: calc(100vh -340px);
   width: 100%;
-  overflow: hidden;
 }
 .title {
   text-align: center;

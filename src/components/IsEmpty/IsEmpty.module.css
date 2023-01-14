@@ -1,8 +1,7 @@
-.notFoundPage {
+.isEmpty {
   position: relative;
-  height: calc(100vh - 100px);
-
-  width: 100%;
+  height: calc(100vh - 246px);
+  min-height: 100px;
 }
 .text {
   position: absolute;

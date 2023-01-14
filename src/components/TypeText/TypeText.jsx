@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ReactTextareaAutosize from "react-textarea-autosize";
 import { addTaskItem } from "../../redux/slices/taskListSlice";
 
@@ -9,6 +9,7 @@ const TypeText = () => {
   const inputRef = useRef();
   const [text, setText] = useState("");
   const dispatch = useDispatch();
+
   return (
     <div className={s.typeText}>
       <form onSubmit={(e) => e.preventDefault()} className={s.form}>
@@ -18,6 +19,20 @@ const TypeText = () => {
           className={s.input}
           onChange={(e) => setText(e.target.value)}
           value={text}
+          onKeyDown={(e) => {
+            if (e.keyCode === 13) {
+              e.preventDefault();
+              dispatch(
+                addTaskItem({
+                  text: text,
+                  id: Date.now(),
+                  complited: false,
+                  important: false,
+                })
+              );
+              setText("");
+            }
+          }}
         />
 
         {text && (
@@ -48,6 +63,7 @@ const TypeText = () => {
               })
             );
             setText("");
+            inputRef.current.focus();
           }}
           className={s.btn}
         >
