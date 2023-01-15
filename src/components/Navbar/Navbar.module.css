@@ -13,3 +13,9 @@
 .active {
   border-bottom: 1px solid var(--col-white);
 }
+@media (max-width: 480px) {
+  .link {
+  padding: var(--sp-s) var(--sp-s);
+    
+  }
+}

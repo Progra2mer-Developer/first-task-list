@@ -1,10 +1,24 @@
-# Getting Started with Create React App
+# First Task List React
 
+## Create-react-app
 
+## react-router-dom
+### `BrowserRouter`
+### `basename`
+### `Routes`
+### `Route`
+### `NavLink`
+### `Link`
 
-## Available Scripts
+## react-redux
+### `useSelector`
+### `useDispatch`
 
-In the project directory, you can run:
+## reduxjs/toolkit
 
-### `npm start`
+## react-textarea-autosize
+
+### `useRef`
+### `useEffect`
+### `localStorage`
 

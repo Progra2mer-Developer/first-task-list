@@ -10,3 +10,8 @@ img {
   font-weight: 700;
   font-size: 30px;
 }
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+}

@@ -10,3 +10,8 @@
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
+@media (max-width: 480px) {
+  .text  {
+    font-size: 17px;
+  }
+}
