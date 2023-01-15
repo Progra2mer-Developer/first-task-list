@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import Header from "../components/Header/Header";
+import { initialStorage } from "../redux/slices/taskListSlice";
 import { routes } from "../routesConfig";
 
 import s from "./App.module.css";
 
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(initialStorage());
+  }, []);
   return (
     <div className={s.app}>
       <Header />

@@ -7,4 +7,6 @@ img {
   text-decoration: none;
   padding: var(--sp-s) var(--sp-m);
   border-bottom: 1px solid none;
+  font-weight: 700;
+  font-size: 30px;
 }
