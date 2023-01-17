@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import Header from "../components/Header/Header";
 import { initialStorage } from "../redux/slices/taskListSlice";
-import { routes } from "../routesConfig";
+import { hideRoutes, routes } from "../routesConfig";
 
 import s from "./App.module.css";
 
@@ -18,7 +18,16 @@ const App = () => {
       <Routes>
         {routes.map((route) => {
           return (
-            <Route path={route.path} element={route.element} key={route.name} />
+            <Route path={route.path} element={route.element} key={route.path} />
+          );
+        })}
+        {hideRoutes.map((route) => {
+          return (
+            <Route
+              path={route.path}
+              element={route.element}
+              key={route.path}
+            />
           );
         })}
       </Routes>

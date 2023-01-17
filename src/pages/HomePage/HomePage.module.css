@@ -19,8 +19,10 @@
   border: 2px solid blue;
   cursor: pointer;
   font-weight: 700;
+  transition: 0.2s linear;
 }
 .clear:hover {
   background-color: var(--col-white);
   color: blue;
+  transition: 0.2s linear;
 }

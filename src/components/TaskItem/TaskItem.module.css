@@ -10,13 +10,18 @@
   margin-right: 5px;
 
   position: relative;
+  transition: 0.2s linear;
 }
+
 .text {
+  font-size: 20px;
   word-wrap: break-word;
   overflow: hidden;
 
   cursor: pointer;
+  transition: 0.1s linear;
 }
+
 .gold {
   color: gold;
 }
@@ -30,11 +35,20 @@
 }
 .remove {
   width: 28px;
-
   cursor: pointer;
+  transition: 0.3s linear;
+}
+.remove:hover {
+  transform: scale(1.2);
+  transition: 0.3s linear;
 }
 .important {
   width: 28px;
   height: 28px;
   cursor: pointer;
+  transition: 0.3s linear;
+}
+.important:hover {
+  transform: scale(1.2);
+  transition: 0.3s linear;
 }
